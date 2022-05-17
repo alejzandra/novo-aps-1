@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    background-color: #f1f1f1;
+}
+
+header{
+    text-align: center;
+    background-color: #7e2b61;
+    padding: 10px;
+}
+
+header h1{
+    font-size: 25px;
+    color:  rgb(253, 251, 243);
+}
+
+nav ul{
+    list-style-type: none;
+    background-color: darkcyan;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+nav a{
+    color: rgb(253, 251, 243);
+    text-decoration: none;
+    padding: 16px;
+    display:block;
+}
+
+nav li{
+    float: left;
+}
+
+nav a:hover{
+    background-color: rgb(253, 251, 243);
+    color: darkcyan;
+}
+
+article{
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+form{
+    width: 50%;
+    margin:  auto;
+    box-shadow: 10px 15px 20px rgb(75, 75, 75);
+    text-align: justify;
+}
+
+input, textarea{
+    width: 95%;
+    padding: 10px;
+    margin:1em;
+    font: 1em sans-serif;
+    border: 2px solid #999;
+}
+
+label{
+    font-weight: bold;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+button{
+    border: 1%;
+    padding: .5em 1em;
+    font-family: "Open Sans Condensed", sans-serif;
+    background-color: rgb(138, 202, 194);
+    color: white;
+    font-size: 1.2em;
+    margin-left: auto;
+    margin-top: 1em;
+    cursor: pointer;
+    text-align: center;
+
+}
+button:hover, button:focus{
+    background-color: rgb(255, 215, 140);
+}
+
+footer{
+    background-color: darkcyan;
+    padding: 10px;
+    color: white;
+}
+
+span{
+    position: relative;
+}
+
+input:invalid{
+    border-color: red;
+}
+
+input:valid{
+    border-color:green;
+}
+
+textarea:invalid{
+    border-color:red;
+}
+
+textarea:valid{
+    border-color:green;
+}
+
+input:invalid + span::before, textarea:invalid + span::before{
+    content:'✖';
+    color:red;
+}
+
+input:valid + span::before, textarea:valid + span::before{
+    content:'✓' ;
+    color:green;
+}
+
+input + span::before{
+    position: absolute;
+    left: 640px;
+    top:-45px;
+}
+
+textarea + span::before{
+    position: absolute;
+    left: 640px;
+    top: -45px;
+}
+
+@media screen and (max-width:768px){
+    section, aside{
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:320px){
+    nav li{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+}
